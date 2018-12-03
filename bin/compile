@@ -210,7 +210,8 @@ export GOOGLE_CHROME_SHIM="\$HOME/.apt/usr/bin/$SHIM"
 EOF
 
 #nsis
-topic "NSIS Installation"
+topic "NSIS Installation Cha"
 cd /
-apt-get $APT_OPTIONS -y --force-yes -d install --reinstall nsis | indent
+apt-get install nsis
+apt-get install -f
 makensis
