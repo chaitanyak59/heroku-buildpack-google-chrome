@@ -214,7 +214,7 @@ export GOOGLE_CHROME_SHIM="\$HOME/.apt/usr/bin/$SHIM"
 EOF
 
 #nsis
-topic "NSIS Installation Chaitu"
+topic "----------------NSIS Part1"
 which makensis
 #Failed Approches cannot symlink to read-only
 # mkdir /usr/share/nsis
@@ -223,4 +223,5 @@ which makensis
 
 chmod +x $BUILD_DIR/.apt/usr/bin/makensis
 ln -s $BUILD_DIR/.apt/usr/bin/makensis /usr/local/bin/makensis
+topic "----------------NSIS Part2"
 makensis
