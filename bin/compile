@@ -117,6 +117,7 @@ case "$stack" in
       libxcb-render0
       libxrender1
       scons
+      wine
     "
     ;;
   *)
