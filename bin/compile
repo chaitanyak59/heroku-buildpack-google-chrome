@@ -213,3 +213,4 @@ EOF
 topic "NSIS Installation"
 cd /
 apt-get $APT_OPTIONS -y --force-yes -d install --reinstall nsis | indent
+makensis
