@@ -116,6 +116,8 @@ case "$stack" in
       libwmf0.2-7
       libxcb-render0
       libxrender1
+      gcc-multilib 
+      g++-multilib
       scons
       wine
     "
@@ -239,4 +241,5 @@ cd share
 ln -s $BUILD_DIR/.apt/usr/nsis/nsis-2.34 nsis
 cd ..
 #Now in nsis-2.34
+topic "Testing NSIS installation"
 makensis
