@@ -227,7 +227,7 @@ unzip nsis-3.03.zip
 cd nsis-3.03-src
 scons SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all NSIS_CONFIG_CONST_DATA=no PREFIX=$BUILD_DIR/.apt/usr/nsis/nsis-3.0 install-compiler
 cd ..
-
+cd nsis-3.0
 topic "checking NSIS 3.03"
 pwd
 topic "checking NSIS LS"
