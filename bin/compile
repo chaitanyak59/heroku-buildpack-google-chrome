@@ -227,7 +227,13 @@ tar -jxvf nsis-3.03-src.tar.bz2
 unzip nsis-3.03.zip
 
 cd nsis-3.03-src
-#This command will build the 'makensis' in $BUILD_DIR/usr/local/nsis/nsis-2.34
+#This command will build the 'makensis'
 scons SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all NSIS_CONFIG_CONST_DATA=no PREFIX=$BUILD_DIR/.apt/usr/nsis/nsis-3.03 install-compiler
+
+chmod +x $BUILD_DIR/.apt/usr/nsis/nsis-3.03/bin/makensis
 ln -s $BUILD_DIR/.apt/usr/nsis/nsis-3.03/bin/makensis $BUILD_DIR/.apt/usr/bin/makensis
+
+mkdir $BUILD_DIR/.apt/usr/nsis/nsis-3.03/share
+cd $BUILD_DIR/.apt/usr/nsis/nsis-3.03/share
+ln -s $BUILD_DIR/.apt/usr/nsis/nsis-3.03 nsis
 makensis 
