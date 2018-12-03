@@ -215,7 +215,7 @@ EOF
 
 #nsis
 topic "----------------NSIS Part1"
-makensis
+which makensis
 # mkdir $BUILD_DIR/.apt/usr/nsis
 # cd $BUILD_DIR/.apt/usr/nsis
 # #Wget NSIS packages
