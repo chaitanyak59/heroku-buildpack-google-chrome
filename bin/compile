@@ -216,8 +216,11 @@ EOF
 #nsis
 topic "NSIS Installation Chaitu"
 which makensis
-mkdir /usr/share/nsis
-mkdir /usr/share/nsis/Stubs
-ln -s $BUILD_DIR/.apt/usr/share/nsis/Stubs /usr/share/nsis/Stubs
-find / -type d -name "Stubs"
+#Failed Approches cannot symlink to read-only
+# mkdir /usr/share/nsis
+# mkdir /usr/share/nsis/Stubs
+# ln -s $BUILD_DIR/.apt/usr/share/nsis/Stubs /usr/share/nsis/Stubs
+
+chmod +x $BUILD_DIR/.apt/usr/bin/makensis
+ln -s $BUILD_DIR/.apt/usr/bin/makensis /usr/local/bin/makensis
 makensis
