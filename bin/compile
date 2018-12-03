@@ -216,6 +216,8 @@ EOF
 #nsis
 topic "NSIS Installation Chaitu"
 which makensis
+mkdir /usr/share/nsis
+mkdir /usr/share/nsis/Stubs
 ln -s $BUILD_DIR/.apt/usr/share/nsis/Stubs /usr/share/nsis/Stubs
 find / -type d -name "Stubs"
 makensis
