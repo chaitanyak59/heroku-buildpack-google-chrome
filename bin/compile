@@ -236,3 +236,4 @@ cd ..
 ls
 export PATH="$BUILD_DIR/.apt/usr/nsis/nsis-3.0:$PATH"
 chmod a+x makensis.exe 
+makensis.exe /CMDHELP
