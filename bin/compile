@@ -231,10 +231,7 @@ cd nsis-3.0/
 mkdir share
 cd share
 ln -s $BUILD_DIR/.apt/usr/nsis/nsis-3.0 nsis
-topic "checking NSIS 3.03"
-pwd
-topic "checking NSIS LS"
 cd ..
 ls
 export PATH="$BUILD_DIR/.apt/usr/nsis/nsis-3.0:$PATH"
-makensis 
+chmod a+x makensis.exe 
