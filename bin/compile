@@ -115,6 +115,7 @@ case "$stack" in
       libwmf0.2-7
       libxcb-render0
       libxrender1
+      nsis
     "
     ;;
   *)
@@ -211,7 +212,4 @@ EOF
 
 #nsis
 topic "NSIS Installation Cha"
-cd /
-apt-get install nsis
-apt-get install -f
 makensis
