@@ -238,9 +238,9 @@ ln -s $BUILD_DIR/.apt/usr/nsis/nsis-3.03/bin/makensis $BUILD_DIR/.apt/usr/bin/ma
 
 mkdir $BUILD_DIR/.apt/usr/nsis/nsis-3.03/share
 cd $BUILD_DIR/.apt/usr/nsis/nsis-3.03/share
+topic "NSIS 3-0.3"
+ls $BUILD_DIR/.apt/usr/nsis/nsisWithStubs/nsis-3.03
 ln -s $BUILD_DIR/.apt/usr/nsis/nsisWithStubs/nsis-3.03 nsis
 cd nsi*
 ls
-topic "NSIS 3-0.3"
-ls $BUILD_DIR/.apt/usr/nsis/nsisWithStubs/nsis-3.03
 makensis 
