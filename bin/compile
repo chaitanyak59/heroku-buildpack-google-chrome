@@ -212,5 +212,5 @@ EOF
 
 #nsis
 topic "NSIS Installation Chaitu"
-which makenis
+which makensis
 makensis
