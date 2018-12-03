@@ -226,9 +226,11 @@ unzip nsis-3.03.zip
 
 cd nsis-3.03-src
 scons SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all NSIS_CONFIG_CONST_DATA=no PREFIX=$BUILD_DIR/.apt/usr/nsis/nsis-3.0 install-compiler
-topic "topic- NSIS checking Directory"
+cd ../nsis-3.03
+
+topic "checking NSIS 3.03"
 pwd
-topic "topic- NSIS checking LS"
+topic "checking NSIS LS"
 ls
 # #This command will build the 'makensis'
 # scons SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all NSIS_CONFIG_CONST_DATA=no PREFIX=$BUILD_DIR/.apt/usr/nsis/nsis-3.03 install-compiler
