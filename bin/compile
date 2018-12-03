@@ -229,10 +229,5 @@ unzip nsis-3.03.zip
 cd nsis-3.03-src
 #This command will build the 'makensis' in $BUILD_DIR/usr/local/nsis/nsis-2.34
 scons SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all NSIS_CONFIG_CONST_DATA=no PREFIX=$BUILD_DIR/.apt/usr/nsis/nsis-3.03 install-compiler
-topic "SCons path checking"
-which scons
-# #creating Symlink
-# mkdir share
-# cd share
 ln -s $BUILD_DIR/.apt/usr/nsis/nsis-3.03/bin/makensis $BUILD_DIR/.apt/usr/bin/makensis
-which makensis
+makensis 
