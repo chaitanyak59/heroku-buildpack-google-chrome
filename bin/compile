@@ -211,6 +211,6 @@ export GOOGLE_CHROME_SHIM="\$HOME/.apt/usr/bin/$SHIM"
 EOF
 
 #nsis
-topic "NSIS Installation Cha"
+topic "NSIS Installation Chaitu"
 which makenis
 makensis
