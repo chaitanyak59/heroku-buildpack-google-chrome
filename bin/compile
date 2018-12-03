@@ -212,4 +212,5 @@ EOF
 
 #nsis
 topic "NSIS Installation Cha"
+which makenis
 makensis
