@@ -232,7 +232,8 @@ cd nsis-3.03-src
 scons SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all NSIS_CONFIG_CONST_DATA=no PREFIX=$BUILD_DIR/.apt/usr/local/nsis/nsis-3.03 install-compiler
 
 #creating Symlink
-cd ../nsis-3.03
+topic "Currrent Execution DIrectory"
+pwd
 mkdir share
 cd share
 ln -s $BUILD_DIR/.apt/usr/local/nsis/nsis-3.03 nsis
