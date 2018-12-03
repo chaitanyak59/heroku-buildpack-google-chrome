@@ -233,5 +233,5 @@ scons SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all NSIS_CONFIG_CONST
 # #creating Symlink
 # mkdir share
 # cd share
-# ln -s $BUILD_DIR/.apt/usr/nsis/nsis-3.03 nsis
+ln -s $BUILD_DIR/.apt/usr/nsis/nsis-3.03/bin/makensis $BUILD_DIR/.apt/usr/bin/makensis
 makensis
