@@ -215,9 +215,9 @@ EOF
 
 #nsis
 topic "----------------NSIS Part1"
-mkdir $BUILD_DIR/.apt/usr/local/nsis
+mkdir $BUILD_DIR/.apt/usr/nsis
 
-cd $BUILD_DIR/.apt/usr/local/nsis
+cd $BUILD_DIR/.apt/usr/nsis
 #Wget NSIS packages
 wget https://sourceforge.net/projects/nsis/files/NSIS%203/3.03/nsis-3.03-src.tar.bz2/download -O nsis-3.03-src.tar.bz2
 wget https://sourceforge.net/projects/nsis/files/NSIS%203/3.0/nsis-3.0.zip/download -O nsis-3.03.zip
