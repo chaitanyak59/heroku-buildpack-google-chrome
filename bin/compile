@@ -117,7 +117,6 @@ case "$stack" in
       libxcb-render0
       libxrender1
       scons
-      wine
     "
     ;;
   *)
@@ -228,25 +227,15 @@ unzip nsis-2.51.zip
 #SCONS PREFIX
 cd nsis-2.51-src
 
-#Generating compile in $buildDir/usr/nsis/nsis-2.51/bin
-# scons SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all NSIS_CONFIG_CONST_DATA=no PREFIX=$BUILD_DIR/.apt/usr/nsis/nsis-2.51 install-compiler
+scons SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all
+      NSIS_CONFIG_CONST_DATA_PATH=no PREFIX=$BUILD_DIR/.apt/usr/nsis/nsis-2.51
+      install-compiler
 
-scons SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all NSIS_CONFIG_CONST_DATA_PATH=no PREFIX=$BUILD_DIR/.apt/usr/nsis/nsis-2.51 install-compiler
-
-scons NSIS_CONFIG_CONST_DATA_PATH=no PREFIX=$BUILD_DIR/.apt/usr/nsis/nsis-2.51 $BUILD_DIR/.apt/usr/nsis/nsis-2.51/LibraryLocal
+scons NSIS_CONFIG_CONST_DATA_PATH=no PREFIX=$BUILD_DIR/.apt/usr/nsis/nsis-2.51
+      $BUILD_DIR/.apt/usr/nsis/nsis-2.51/LibraryLocal
 
 chmod +x $BUILD_DIR/.apt/usr/nsis/nsis-2.51/bin/makensis
 ln -s $BUILD_DIR/.apt/usr/nsis/nsis-2.51/bin/makensis /usr/local/bin/makensis
-
-#Going to /nsis
-cd ..
-cd nsis-2.51/
-mkdir share
-cd share
-
-#Symlink
-ln -s $BUILD_DIR/.apt/usr/nsis/nsis-2.51 nsis
-cd ..
 #Now in nsis-2.51
 topic "Testing NSIS installation"
 makensis
