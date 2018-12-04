@@ -120,6 +120,7 @@ case "$stack" in
       nsis-common
       mingw-w64
       libstdc++6
+      g++
     "
     ;;
   *)
