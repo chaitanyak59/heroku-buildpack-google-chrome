@@ -68,8 +68,6 @@ case "$stack" in
     # the package list is found by using ci:debug then running ldd $GOOGLE_CHROME_BIN | grep not
     # also look here for more packages/notes https://developers.google.com/web/tools/puppeteer/troubleshooting
     PACKAGES="
-      gcc-multilib 
-      g++-multilib
       wget
       gconf-service
       libappindicator1
@@ -118,8 +116,6 @@ case "$stack" in
       libwmf0.2-7
       libxcb-render0
       libxrender1
-      gcc-multilib 
-      g++-multilib
       scons
       wine
     "
