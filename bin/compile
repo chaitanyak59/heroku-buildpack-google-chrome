@@ -115,14 +115,6 @@ case "$stack" in
       libwmf0.2-7
       libxcb-render0
       libxrender1
-      xvfb
-      x11-xkb-utils
-      xfonts-100dpi
-      xfonts-75dpi
-      xfonts-scalable
-      xfonts-cyrillic
-      libxfont1
-      libnotify4
       wine-stable
     "
     ;;
