@@ -68,7 +68,6 @@ case "$stack" in
     # the package list is found by using ci:debug then running ldd $GOOGLE_CHROME_BIN | grep not
     # also look here for more packages/notes https://developers.google.com/web/tools/puppeteer/troubleshooting
     PACKAGES="
-      wget
       gconf-service
       libappindicator1
       libasound2
@@ -116,12 +115,15 @@ case "$stack" in
       libwmf0.2-7
       libxcb-render0
       libxrender1
-      scons
-      nsis-common
-      mingw-w64
-      libstdc++6
-      g++
-      nsis
+      xvfb
+      x11-xkb-utils
+      xfonts-100dpi
+      xfonts-75dpi
+      xfonts-scalable
+      xfonts-cyrillic
+      libxfont1
+      libnotify4
+      wine
     "
     ;;
   *)
@@ -171,7 +173,6 @@ for DEB in $(ls -1 $APT_CACHE_DIR/archives/*.deb); do
   dpkg -x $DEB $BUILD_DIR/.apt/
 done
 
-
 topic "Writing profile script"
 mkdir -p $BUILD_DIR/.profile.d
 cat <<EOF >$BUILD_DIR/.profile.d/000_apt.sh
@@ -217,30 +218,5 @@ export GOOGLE_CHROME_BIN="\$HOME/.apt/opt/google/$BIN"
 export GOOGLE_CHROME_SHIM="\$HOME/.apt/usr/bin/$SHIM"
 EOF
 
-topic "NSIS installation"
-# mkdir $BUILD_DIR/.apt/usr/nsis
-# cd $BUILD_DIR/.apt/usr/nsis
-# #Wget NSIS packages
-# wget https://sourceforge.net/projects/nsis/files/NSIS%202/2.51/nsis-2.51-src.tar.bz2/download -O nsis-2.51-src.tar.bz2
-# wget https://sourceforge.net/projects/nsis/files/NSIS%202/2.51/nsis-2.51.zip/download -O nsis-2.51.zip
-
-# #src
-# tar -jxvf nsis-2.51-src.tar.bz2
-# #precompiled Package
-# unzip nsis-2.51.zip
-
-# #SCONS PREFIX
-# cd nsis-2.51-src
-
-# scons SKIPSTUBS=all SKIPPLUGINS=all SKIPUTILS=all SKIPMISC=all
-#       NSIS_CONFIG_CONST_DATA_PATH=no PREFIX=$BUILD_DIR/.apt/usr/nsis/nsis-2.51
-#       install-compiler
-
-# scons NSIS_CONFIG_CONST_DATA_PATH=no PREFIX=$BUILD_DIR/.apt/usr/nsis/nsis-2.51
-#       $BUILD_DIR/.apt/usr/nsis/nsis-2.51/LibraryLocal
-
-# chmod +x $BUILD_DIR/.apt/usr/nsis/nsis-2.51/bin/makensis
-# ln -s $BUILD_DIR/.apt/usr/nsis/nsis-2.51/bin/makensis /usr/local/bin/makensis
-# #Now in nsis-2.51
-# topic "Testing NSIS installation"
-makensis
+topic "check Node version"
+node --version
