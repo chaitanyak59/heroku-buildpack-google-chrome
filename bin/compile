@@ -215,6 +215,8 @@ EOF
 topic "Installing Wine"
 wget http://deb.debian.org/debian/pool/main/w/wine/wine_1.8.7-2.debian.tar.xz
 tar xvf wine_1.8.7-2.debian.tar.xz
+cd wine_1.8.7-2.debian
 ./configure
 make
 make install
+cd ..
