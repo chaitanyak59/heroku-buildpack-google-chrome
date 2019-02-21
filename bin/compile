@@ -115,6 +115,7 @@ case "$stack" in
       libwmf0.2-7
       libxcb-render0
       libxrender1,
+      wget
    "
     ;;
   *)
@@ -156,10 +157,6 @@ for PACKAGE in $PACKAGES; do
     apt-get $APT_OPTIONS -y --force-yes -d install --reinstall $PACKAGE | indent
   fi
 done
-
-topic "Installing Wine"
-apt-get install --install-recommends winehq-stable
-
 
 mkdir -p $BUILD_DIR/.apt
 
@@ -212,3 +209,11 @@ cat <<EOF >$BUILD_DIR/.profile.d/010_google-chrome.sh
 export GOOGLE_CHROME_BIN="\$HOME/.apt/opt/google/$BIN"
 export GOOGLE_CHROME_SHIM="\$HOME/.apt/usr/bin/$SHIM"
 EOF
+
+
+topic "Installing Wine"
+wget http://deb.debian.org/debian/pool/main/w/wine/wine_1.8.7-2.debian.tar.xz
+tar wine_1.8.7-2.debian.tar.xz
+./configure
+make
+make install
