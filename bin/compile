@@ -217,5 +217,6 @@ wget https://dl.winehq.org/wine/source/4.0/wine-4.0.tar.xz
 tar -xvf wine-4.0.tar.xz
 cd wine-4.0/
 ./configure
+./configure --enable-win64
 make && make install
 cd ..
