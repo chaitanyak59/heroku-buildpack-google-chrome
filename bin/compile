@@ -114,7 +114,11 @@ case "$stack" in
       libthai0
       libwmf0.2-7
       libxcb-render0
-      libxrender1
+      libxrender1,
+      wine,
+      wine32,
+      libwine,
+      fonts-wine
    "
     ;;
   *)
@@ -156,12 +160,6 @@ for PACKAGE in $PACKAGES; do
     apt-get $APT_OPTIONS -y --force-yes -d install --reinstall $PACKAGE | indent
   fi
 done
-
-topic "Installing Wine"
-apt-get install wine
-
-topic "Checking Wine Version"
-wine --version
 
 mkdir -p $BUILD_DIR/.apt
 
