@@ -212,10 +212,11 @@ export GOOGLE_CHROME_SHIM="\$HOME/.apt/usr/bin/$SHIM"
 EOF
 
 topic "Installing Flex"
-wget https://github.com/westes/flex/files/981163/flex-2.6.4.tar.gz
-tar -xvzf flex-2.6.4.tar.gz
-cd flex-2.6.4
-PATH=$PATH:/usr/local/m4/bin/
+wget https://github.com/westes/flex/files/981163/flex-2.6.3.tar.gz
+tar -xvzf flex-2.6.3.tar.gz
+cd flex-2.6.3
+# PATH=$PATH:/usr/local/m4/bin/
+# ./configure --prefix=/usr/local/flex
 ./configure --prefix=/usr/local/flex
 make
 make install
