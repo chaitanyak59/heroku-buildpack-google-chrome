@@ -115,8 +115,8 @@ case "$stack" in
       libwmf0.2-7
       libxcb-render0
       libxrender1,
-      wget,
-      xvf
+      gcc-multilib,
+      g++-multilib
    "
     ;;
   *)
@@ -216,7 +216,8 @@ topic "Installing Wine"
 wget https://dl.winehq.org/wine/source/4.0/wine-4.0.tar.xz
 tar -xvf wine-4.0.tar.xz
 cd wine-4.0/
-./configure
+topic "Current Working Directory"
+pwd
 ./configure --enable-win64
 make && make install
 cd ..
