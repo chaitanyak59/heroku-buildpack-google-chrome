@@ -213,7 +213,7 @@ EOF
 
 topic "Installing Flex"
 wget https://github.com/westes/flex/files/981163/flex-2.6.4.tar.gz
-tar flex-2.6.4.tar.gz
+tar -xvf flex-2.6.4.tar.gz
 cd flex-2.6.4
 ./configure
 make && make install
