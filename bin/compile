@@ -217,15 +217,14 @@ tar -xvf flex-2.6.4.tar.gz
 cd flex-2.6.4
 ./configure
 make && make install
+cd ..
 
 topic "Installing Wine"
-# apt-get install flex 
-# wget https://dl.winehq.org/wine/source/4.0/wine-4.0.tar.xz
-# tar -xvf wine-4.0.tar.xz
-# cd wine-4.0/
-# topic "Current Working Directory"
-# pwd
-# ./configure --enable-win64
-# make && make install
-# cd ..
-yum install wine
+wget https://dl.winehq.org/wine/source/4.0/wine-4.0.tar.xz
+tar -xvf wine-4.0.tar.xz
+cd wine-4.0/
+topic "Current Working Directory"
+pwd
+./configure --enable-win64
+make && make install
+cd ..
