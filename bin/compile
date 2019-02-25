@@ -226,15 +226,15 @@ export GOOGLE_CHROME_SHIM="\$HOME/.apt/usr/bin/$SHIM"
 EOF
 
 
-echo "Installing Flex"
-wget http://archive.ubuntu.com/ubuntu/pool/main/f/flex/flex_2.5.35.orig.tar.gz
-tar -xvzf flex_2.5.35.orig.tar.gz
-cd flex-2.5.35
-PATH=$PATH:$BUILD_DIR/.apt/usr/local/m4/bin/
-./configure --prefix=$BUILD_DIR/.apt/usr/local/flex
-make
-make install
-cd ..
+# echo "Installing Flex"
+# wget http://archive.ubuntu.com/ubuntu/pool/main/f/flex/flex_2.5.35.orig.tar.gz
+# tar -xvzf flex_2.5.35.orig.tar.gz
+# cd flex-2.5.35
+# PATH=$PATH:$BUILD_DIR/.apt/usr/local/m4/bin/
+# ./configure --prefix=$BUILD_DIR/.apt/usr/local/flex
+# make
+# make install
+# cd ..
 
 echo "Installing Wine"
 wget https://dl.winehq.org/wine/source/4.0/wine-4.0.tar.xz
