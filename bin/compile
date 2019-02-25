@@ -116,7 +116,21 @@ case "$stack" in
       libxcb-render0
       libxrender1,
       gcc-multilib,
-      g++-multilib
+      g++-multilib,
+      libX11-devel, 
+      freetype-devel,
+      zlib-devel, 
+      libxcb-devel, 
+      libxslt-devel,
+      libgcrypt-devel, 
+      libxml2-devel, 
+      gnutls-devel, 
+      libpng-devel, 
+      libjpeg-turbo-devel,
+      libtiff-devel,
+      gstreamer-devel,
+      dbus-devel,
+      fontconfig-devel,
    "
     ;;
   *)
