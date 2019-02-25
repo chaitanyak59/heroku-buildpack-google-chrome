@@ -216,7 +216,8 @@ echo "Installing Flex"
 wget http://archive.ubuntu.com/ubuntu/pool/main/f/flex/flex_2.5.35.orig.tar.gz
 tar -xvzf flex_2.5.35.orig.tar.gz
 cd flex-2.5.35
-./configure --prefix=$BUILD_DIR/.apt/usr/loca/flex
+PATH=$PATH:$BUILD_DIR/.apt/usr/local/m4/bin/
+./configure --prefix=$BUILD_DIR/.apt/usr/local/flex
 make
 make install
 cd ..
