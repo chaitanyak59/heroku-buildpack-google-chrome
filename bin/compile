@@ -118,6 +118,7 @@ case "$stack" in
       gcc-multilib,
       g++-multilib,
       gettext,
+      gettext-tools
       m4
    "
     ;;
